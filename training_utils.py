@@ -38,8 +38,7 @@ class TrainingProgress:
             print('TP Record new data: ', new_dict)
         pass
 
-    def record_epoch(self, epoch, prefix, new_dict, display=False):  # use this
-        # record every epoch, prefix=train/test/validation....
+    def record_epoch(self, epoch, prefix, new_dict, display=False):
         key = prefix + str(epoch)
         if key in self.epoch_dict.keys():
             self.epoch_dict[key].update(new_dict)
